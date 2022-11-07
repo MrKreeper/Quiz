@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Quiz</string>
+    <string name="q1">Сколько букв в слове Java?</string>
+    <string name="q2">Какие типы данных могут без потерь вместить число 2.89?</string>
+</resources>
