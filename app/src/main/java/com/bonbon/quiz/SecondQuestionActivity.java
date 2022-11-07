@@ -39,12 +39,20 @@ public class SecondQuestionActivity extends AppCompatActivity implements View.On
                 boolean a1 = ch1.isSelected();
                 boolean a2 = ch2.isSelected();
                 boolean a3 = ch3.isSelected();
+                String txt = "";
                 if (!a1) {
-                    textView.setText("");
+                    txt += "Double может хранить нецелые значения с довольно маленькой погрешностью, так что здесь он считается\n";
                 }
+                if (a2) {
+                    txt += "Int - целочисленный тип данных, так что здесь он не подходит\n";
+                }
+                if (!a3) {
+                    txt += "Float также как и Double, может хранить нецелочисленные значения, но с большей погрешностью";
+                }
+                textView.setText(txt);
                 button2.setVisibility(View.VISIBLE);
                 break;
-            case R.id.q1done:
+            case R.id.q2done:
                 Intent intent = new Intent();
                 intent.setClass(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
